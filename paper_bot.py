@@ -4,6 +4,8 @@ import tarfile
 import requests
 import re
 from datetime import datetime, timedelta
+import time
+
 # --- 配置 ---
 SEARCH_QUERY = 'abs: "Large Language Models" AND (abs: "Architecture" OR abs: "System")'
 MAX_RESULTS = 10 
@@ -120,6 +122,10 @@ def main():
         extracted = extract_sections(tex) if tex else f"【Abstract (API)】: {paper.summary}"
         
         summary = call_github_model(paper.title, extracted)
+
+        if i < len(results):
+            print(f"等待 62 秒以遵守 GitHub Models 频率限制...")
+            time.sleep(62)
         
         md_content += f"## {i}. {paper.title}\n"
         md_content += f"- **链接**: {paper.entry_id}\n"
