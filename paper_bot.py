@@ -110,9 +110,9 @@ def main():
     if not results:
         print("未发现论文")
         return
-
-    md_content = f"# 每日论文深度分析 ({results[0].updated.strftime('%Y-%m-%d')})\n\n"
-
+    today = datetime.now().strftime('%Y-%m-%d')
+    md_content = f"# 每日论文深度分析 ({today})\n\n"
+    
     for i, paper in enumerate(results, 1):
         print(f"正在处理 [{i}/{MAX_RESULTS}]: {paper.title}")
         tex = get_tex_content(paper.get_short_id())
@@ -125,7 +125,6 @@ def main():
         md_content += f"- **链接**: {paper.entry_id}\n"
         md_content += f"### 专家点评\n{summary}\n\n---\n"
 
-    today = datetime.now().strftime('%Y-%m-%d')
     with open(f'RESEARCH_REPORT_{today}.md', "w", encoding="utf-8") as f:
         f.write(md_content)
 
