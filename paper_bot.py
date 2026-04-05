@@ -8,7 +8,7 @@ import time
 
 # --- 配置 ---
 SEARCH_QUERY = 'abs: "Large Language Models" AND (abs: "Architecture" OR abs: "System")'
-MAX_RESULTS = 10 
+MAX_RESULTS = 8 
 SYSTEM_PROMPT = "你是一个计算机领域的专家，请你根据文章的abstraction和conclusion，提炼出这篇文章做了什么，怎么做的，好在哪里。"
 # GitHub Models 的配置
 ENDPOINT = "https://models.inference.ai.azure.com"
