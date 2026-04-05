@@ -46,9 +46,8 @@ def get_tex_content(arxiv_id):
         return ""
     finally:
         if os.path.exists("tmp.tar.gz"): os.remove("tmp.tar.gz")
-
+"""
 def call_github_model(title, content):
-    """调用 GitHub Models API"""
     token = os.getenv("GH_MODELS_TOKEN")
     headers = {
         "Authorization": f"Bearer {token}",
@@ -69,7 +68,36 @@ def call_github_model(title, content):
         return res.json()['choices'][0]['message']['content']
     except Exception as e:
         return f"GitHub Model 调用失败: {e}"
+"""
 
+def call_github_model(title, content):
+    token = os.getenv("GH_MODELS_TOKEN")
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json"
+    }
+
+    # 策略：将系统提示词和用户内容合并，减少 400 报错概率
+    full_prompt = f"{SYSTEM_PROMPT}\n\n以下是论文信息：\n标题: {title}\n内容片段: {content}"
+
+    payload = {
+        "model": "DeepSeek-R1", # 请确保你在 GitHub Models 页面看到的是这个名字
+        "messages": [
+            {"role": "user", "content": full_prompt}
+        ]
+        # 暂时去掉 temperature 等参数，使用默认值以排除干扰
+    }
+
+    try:
+        res = requests.post(f"{ENDPOINT}/chat/completions", json=payload, headers=headers)
+
+        if res.status_code != 200:
+            # 关键：返回详细的错误信息，帮助定位是内容太长了还是参数不对
+            return f"GitHub Model 报错 (状态码 {res.status_code}): {res.text}"
+
+        return res.json()['choices'][0]['message']['content']
+    except Exception as e:
+        return f"Python 请求异常: {e}"
 def main():
     client = arxiv.Client()
     search = arxiv.Search(
