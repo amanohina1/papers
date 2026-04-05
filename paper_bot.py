@@ -10,7 +10,7 @@ MAX_RESULTS = 10
 SYSTEM_PROMPT = "你是一个计算机领域的专家，请你根据文章的abstraction和conclusion，提炼出这篇文章做了什么，怎么做的，好在哪里。"
 # GitHub Models 的配置
 ENDPOINT = "https://models.inference.ai.azure.com"
-MODEL_NAME = "DeepSeek-R1" # 或者 "DeepSeek-V3"，根据你 GitHub Models 权限确定
+MODEL_NAME = "DeepSeek-V3" # 或者 "DeepSeek-V3"，根据你 GitHub Models 权限确定
 
 def extract_sections(tex_content):
     """从 LaTeX 源码中寻找摘要和结论"""
