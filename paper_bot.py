@@ -81,7 +81,7 @@ def call_github_model(title, content):
     full_prompt = f"{SYSTEM_PROMPT}\n\n以下是论文信息：\n标题: {title}\n内容片段: {content}"
 
     payload = {
-        "model": "DeepSeek-R1", # 请确保你在 GitHub Models 页面看到的是这个名字
+        "model": "DeepSeek-V3", # 请确保你在 GitHub Models 页面看到的是这个名字
         "messages": [
             {"role": "user", "content": full_prompt}
         ]
