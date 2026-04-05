@@ -1,0 +1,43 @@
+name: Daily Arxiv Expert Report
+
+on:
+  schedule:
+    # 北京时间中午 12:00 运行 (UTC 4:00)
+    - cron: '0 4 * * *'
+  workflow_dispatch: # 方便你随时手动点击运行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install deps
+        run: pip install arxiv requests
+
+      - name: Run Script
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_BASE: ${{ secrets.LLM_API_BASE }} # 如果不设，脚本默认用 OpenAI 地址
+        run: python paper_bot.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "ArxivBot"
+          git config --global user.email "bot@github.com"
+          git add RESEARCH_REPORT_*.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update Research Report $(date +'%Y-%m-%d')"
+            git push
+          fi
