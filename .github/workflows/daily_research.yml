@@ -26,8 +26,7 @@ jobs:
 
       - name: Run Script
         env:
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-          LLM_API_BASE: ${{ secrets.LLM_API_BASE }} # 如果不设，脚本默认用 OpenAI 地址
+          GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }} # 如果不设，脚本默认用 OpenAI 地址
         run: python paper_bot.py
 
       - name: Commit and Push
