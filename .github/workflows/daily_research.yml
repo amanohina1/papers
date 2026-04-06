@@ -3,7 +3,7 @@ name: Daily Arxiv Expert Report
 on:
   schedule:
     # 北京时间中午 12:00 运行 (UTC 4:00)
-    - cron: '0 4 * * *'
+    - cron: '12 6 * * *'
   workflow_dispatch: # 方便你随时手动点击运行
 
 jobs:
