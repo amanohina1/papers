@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --global user.name "ArxivBot"
           git config --global user.email "bot@github.com"
-          git add RESEARCH_REPORT_*.md
+          git add *.md
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
