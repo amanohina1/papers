@@ -9,7 +9,7 @@ import time
 # --- 配置 ---
 SEARCH_QUERY = 'abs: "Large Language Models" AND (abs: "Architecture" OR abs: "System")'
 MAX_RESULTS = 8 
-SYSTEM_PROMPT = "你是一个计算机体系结构和LLM基础架构领域的专家，请你根据文章的abstraction和conclusion，提炼出这篇文章做了什么，怎么做的，比现有的工作好在哪里。"
+SYSTEM_PROMPT = "你是一个计算机体系结构和LLM基础架构领域的专家，请你根据文章的abstract和conclusion，提炼出这篇文章做了什么，怎么做的，比现有的工作好在哪里。回答时前三个方面使用1、2、3...分点作答。关于文中未提及的信息，只能回答未提及，专业术语应当保持英文。"
 # GitHub Models 的配置
 ENDPOINT = "https://models.inference.ai.azure.com"
 MODEL_NAME = "DeepSeek-V3-0324" 
