@@ -130,9 +130,11 @@ def main():
         md_content += f"## {i}. {paper.title}\n"
         md_content += f"- **链接**: {paper.entry_id}\n"
         md_content += f"### 专家点评\n{summary}\n\n---\n"
-
+        
+    report_filename = f'RESEARCH_REPORT_{today}.md'
     with open(f'RESEARCH_REPORT_{today}.md', "w", encoding="utf-8") as f:
         f.write(md_content)
-
+    with open(f'README.md', "a", encoding="utf-8") as f:
+        f.write(f'Articles published on {today} is updated here is the link:[{report_filename}](./{report_filename})')
 if __name__ == "__main__":
     main()
