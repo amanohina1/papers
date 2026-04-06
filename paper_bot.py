@@ -9,10 +9,10 @@ import time
 # --- 配置 ---
 SEARCH_QUERY = 'abs: "Large Language Models" AND (abs: "Architecture" OR abs: "System")'
 MAX_RESULTS = 8 
-SYSTEM_PROMPT = "你是一个计算机领域的专家，请你根据文章的abstraction和conclusion，提炼出这篇文章做了什么，怎么做的，好在哪里。"
+SYSTEM_PROMPT = "你是一个计算机体系结构和LLM基础架构领域的专家，请你根据文章的abstraction和conclusion，提炼出这篇文章做了什么，怎么做的，比现有的工作好在哪里。"
 # GitHub Models 的配置
 ENDPOINT = "https://models.inference.ai.azure.com"
-MODEL_NAME = "DeepSeek-V3-0324" # 或者 "DeepSeek-V3"，根据你 GitHub Models 权限确定
+MODEL_NAME = "DeepSeek-V3-0324" 
 
 def extract_sections(tex_content):
     """从 LaTeX 源码中寻找摘要和结论"""
