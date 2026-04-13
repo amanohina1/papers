@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import time
 
 # --- 配置 ---
-SEARCH_QUERY = 'abs: "Large Language Models" AND (abs: "Architecture" OR abs: "System")'
+SEARCH_QUERY = 'abs: "Architecture" AND (abs: "Large Language Models" OR abs: "AI") OR "System"'
 MAX_RESULTS = 8 
 SYSTEM_PROMPT = "你是一个计算机体系结构和LLM基础架构领域的专家，请你根据文章的abstract（若有）和conclusion（若有），提炼出这篇文章做了什么，怎么做的，比现有的工作好在哪里。回答时，使用中文，根据前三个方面以markdown格式用1、2、3...分点作答。关于文中未提及的信息，只能回答未提及，专业术语应当保持英文。"
 # GitHub Models 的配置
