@@ -135,6 +135,6 @@ def main():
     with open(f'RESEARCH_REPORT_{today}.md', "w", encoding="utf-8") as f:
         f.write(md_content)
     with open(f'README.md', "a", encoding="utf-8") as f:
-        f.write(f'Articles published on {today} is updated here is the link:[{report_filename}](./{report_filename})')
+        f.write(f'Articles published on {today} is updated here is the link:[{report_filename}](./{report_filename})' + '\n')
 if __name__ == "__main__":
     main()
