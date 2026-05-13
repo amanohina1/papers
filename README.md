@@ -30,3 +30,4 @@ Articles published on 2026-05-09 is updated here is the link:[RESEARCH_REPORT_20
 Articles published on 2026-05-10 is updated here is the link:[RESEARCH_REPORT_2026-05-10.md](./RESEARCH_REPORT_2026-05-10.md)
 Articles published on 2026-05-11 is updated here is the link:[RESEARCH_REPORT_2026-05-11.md](./RESEARCH_REPORT_2026-05-11.md)
 Articles published on 2026-05-12 is updated here is the link:[RESEARCH_REPORT_2026-05-12.md](./RESEARCH_REPORT_2026-05-12.md)
+Articles published on 2026-05-13 is updated here is the link:[RESEARCH_REPORT_2026-05-13.md](./RESEARCH_REPORT_2026-05-13.md)
