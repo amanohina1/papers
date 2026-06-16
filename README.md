@@ -50,3 +50,4 @@ Articles published on 2026-06-12 is updated here is the link:[RESEARCH_REPORT_20
 Articles published on 2026-06-13 is updated here is the link:[RESEARCH_REPORT_2026-06-13.md](./RESEARCH_REPORT_2026-06-13.md)
 Articles published on 2026-06-14 is updated here is the link:[RESEARCH_REPORT_2026-06-14.md](./RESEARCH_REPORT_2026-06-14.md)
 Articles published on 2026-06-15 is updated here is the link:[RESEARCH_REPORT_2026-06-15.md](./RESEARCH_REPORT_2026-06-15.md)
+Articles published on 2026-06-16 is updated here is the link:[RESEARCH_REPORT_2026-06-16.md](./RESEARCH_REPORT_2026-06-16.md)
