@@ -177,3 +177,4 @@ Articles published on 2026-10-23 is updated here is the link:[RESEARCH_REPORT_20
 Articles published on 2026-10-25 is updated here is the link:[RESEARCH_REPORT_2026-10-25.md](./RESEARCH_REPORT_2026-10-25.md)
 Articles published on 2026-10-26 is updated here is the link:[RESEARCH_REPORT_2026-10-26.md](./RESEARCH_REPORT_2026-10-26.md)
 Articles published on 2026-10-28 is updated here is the link:[RESEARCH_REPORT_2026-10-28.md](./RESEARCH_REPORT_2026-10-28.md)
+Articles published on 2026-10-29 is updated here is the link:[RESEARCH_REPORT_2026-10-29.md](./RESEARCH_REPORT_2026-10-29.md)
