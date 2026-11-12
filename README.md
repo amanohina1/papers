@@ -191,3 +191,4 @@ Articles published on 2026-11-08 is updated here is the link:[RESEARCH_REPORT_20
 Articles published on 2026-11-09 is updated here is the link:[RESEARCH_REPORT_2026-11-09.md](./RESEARCH_REPORT_2026-11-09.md)
 Articles published on 2026-11-10 is updated here is the link:[RESEARCH_REPORT_2026-11-10.md](./RESEARCH_REPORT_2026-11-10.md)
 Articles published on 2026-11-11 is updated here is the link:[RESEARCH_REPORT_2026-11-11.md](./RESEARCH_REPORT_2026-11-11.md)
+Articles published on 2026-11-12 is updated here is the link:[RESEARCH_REPORT_2026-11-12.md](./RESEARCH_REPORT_2026-11-12.md)
